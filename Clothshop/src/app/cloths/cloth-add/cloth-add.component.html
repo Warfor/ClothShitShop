@@ -1,0 +1,22 @@
+<button routerLink="/cloths">Back</button>
+<!-- add form here -->
+
+<form [formGroup]="clothForm" (ngSubmit)="save()">
+
+  <label>
+  type:
+    <input type="text" formControlName="type">
+  </label>
+
+  <label>
+  size:
+    <input type="text" formControlName="size">
+  </label>
+
+  <label>
+    color
+    <input type="text" formControlName="color">
+  </label>
+
+  <button type="submit">Save"</button>
+</form>

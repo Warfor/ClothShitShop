@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let cloth of cloths">
+    <a routerLink="/cloths/{{cloth.id}}">
+      {{cloth.type}} {{cloth.size}}</a>
+    <button routerLink="/cloth-update/{{cloth.id}}">Update</button>
+    <button (click)="delete(cloth.id)">Delete</button>
+  </li>
+</ul>
+<button routerLink="/cloth-add">Add Cloth</button>
+
