@@ -16,6 +16,7 @@ export class ClothsListComponent implements OnInit {
 
   ngOnInit() {
     this.cloths = this.clothService.getCloths();
+
   }
 
   delete(id: number) {

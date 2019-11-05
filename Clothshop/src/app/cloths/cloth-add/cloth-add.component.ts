@@ -22,6 +22,6 @@ export class ClothAddComponent implements OnInit {
     const cloth = this.clothForm.value;
     this.clothService.addCloth(cloth);
     this.clothForm.reset();
-    this.router.navigateByUrl('cloths');
+    this.router.navigateByUrl('/cloths');
   }
 }

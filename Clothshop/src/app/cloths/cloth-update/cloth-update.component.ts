@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ClothService} from '../../shared/services/cloth.service';
 import {FormControl, FormGroup} from '@angular/forms';
+import {executeDevServerBuilder} from '@angular-devkit/build-angular';
 
 
 @Component({
@@ -26,14 +27,15 @@ export class ClothUpdateComponent implements OnInit {
     this.clothForm.patchValue({
       type: cloth.type,
       size: cloth.size,
-      color: cloth.color
+      color: cloth.color,
+      id: cloth.id
     });
   }
   save() {
     const cloth = this.clothForm.value;
     cloth.id = this.id;
     this.clothService.updateCloth(cloth);
-    /*this.clothForm.reset();
-    this.router.navigateByUrl('/cloths');*/
+    this.clothForm.reset();
+    this.router.navigateByUrl('/cloths');
   }
 }

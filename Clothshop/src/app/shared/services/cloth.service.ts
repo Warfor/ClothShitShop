@@ -7,7 +7,7 @@ import {migrateLegacyGlobalConfig} from '@angular/cli/utilities/config';
 })
 export class ClothService {
 cloths: Cloth[];
-id: 1;
+  id = 1;
   constructor() {
     this.cloths = [
       {id: this.id++, type: 'Jacket', size: 'XL', color: 'Black'},
@@ -29,7 +29,7 @@ id: 1;
     this.cloths[index] = cloth;
 }
   deleteCloth(id: number) {
-    this.cloths = this.cloths.filter( clot => clot.id !== id);
+    this.cloths = this.cloths.filter(clot => clot.id !== id);
 }
 
   getClothById(id: number) {
